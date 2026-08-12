@@ -2,26 +2,742 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1"
-  />
-  <title>Privacy Policy — OuiOui</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Privacy Policy for the OuiOui mobile application." />
+  <meta name="robots" content="index,follow" />
+  <meta name="color-scheme" content="light" />
+  <title>Privacy Policy | OuiOui</title>
+
+  <style>
+    :root {
+      --background: #f6f6fb;
+      --surface: #ffffff;
+      --surface-soft: #f0eefc;
+      --text: #1c1b24;
+      --muted: #646273;
+      --accent: #6555cf;
+      --accent-dark: #4b3eaa;
+      --border: #e4e2ed;
+      --shadow: 0 24px 70px rgba(35, 29, 76, 0.09);
+      --radius-large: 26px;
+      --radius-medium: 16px;
+      --content-width: 860px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 24px;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top left, rgba(101, 85, 207, 0.10), transparent 34rem),
+        var(--background);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.72;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a {
+      color: var(--accent-dark);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    a:hover {
+      color: var(--accent);
+    }
+
+    .page-shell {
+      width: min(calc(100% - 32px), var(--content-width));
+      margin: 0 auto;
+    }
+
+    main {
+      padding-top: 56px;
+    }
+
+    article {
+      overflow: hidden;
+      border: 1px solid rgba(228, 226, 237, 0.86);
+      border-radius: var(--radius-large);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .hero {
+      padding: 56px 56px 44px;
+      background:
+        linear-gradient(145deg, rgba(101, 85, 207, 0.11), rgba(101, 85, 207, 0.02) 58%),
+        var(--surface);
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent-dark);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin-top: 0;
+      line-height: 1.2;
+      letter-spacing: -0.03em;
+    }
+
+    h1 {
+      max-width: 700px;
+      margin-bottom: 16px;
+      font-size: clamp(38px, 7vw, 62px);
+    }
+
+    h2 {
+      margin-bottom: 18px;
+      font-size: clamp(26px, 4vw, 34px);
+    }
+
+    h3 {
+      margin: 28px 0 10px;
+      font-size: 20px;
+    }
+
+    p,
+    ul,
+    ol,
+    dl {
+      margin-top: 0;
+    }
+
+    .hero-copy {
+      max-width: 690px;
+      margin-bottom: 24px;
+      color: #444152;
+      font-size: 18px;
+    }
+
+    .updated {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0;
+      padding: 8px 12px;
+      border: 1px solid rgba(101, 85, 207, 0.18);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.76);
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 650;
+    }
+
+    .updated::before {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      content: "";
+    }
+
+    .content {
+      padding: 14px 56px 58px;
+    }
+
+    .toc {
+      margin: 28px 0 10px;
+      padding: 26px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-medium);
+      background: #fbfaff;
+    }
+
+    .toc h2 {
+      margin-bottom: 14px;
+      font-size: 20px;
+    }
+
+    .toc-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px 24px;
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .toc-list li::marker {
+      color: var(--accent);
+    }
+
+    section {
+      padding-top: 46px;
+    }
+
+    section + section {
+      margin-top: 44px;
+      border-top: 1px solid var(--border);
+    }
+
+    .lead {
+      color: #454253;
+      font-size: 17px;
+    }
+
+    ul,
+    ol {
+      padding-left: 23px;
+    }
+
+    li + li {
+      margin-top: 8px;
+    }
+
+    li::marker {
+      color: var(--accent);
+    }
+
+    .callout {
+      margin: 24px 0;
+      padding: 24px;
+      border: 1px solid rgba(101, 85, 207, 0.20);
+      border-radius: var(--radius-medium);
+      background: var(--surface-soft);
+    }
+
+    .callout h3 {
+      margin-top: 0;
+    }
+
+    .callout p:last-child,
+    .callout ul:last-child {
+      margin-bottom: 0;
+    }
+
+    .provider-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .provider {
+      padding: 20px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: #fcfcfe;
+    }
+
+    .provider strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 17px;
+    }
+
+    .provider p {
+      margin-bottom: 8px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .retention-list {
+      display: grid;
+      gap: 14px;
+      margin: 24px 0 0;
+    }
+
+    .retention-list > div {
+      padding: 18px 20px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: #fcfcfe;
+    }
+
+    .retention-list dt {
+      margin-bottom: 4px;
+      font-weight: 800;
+    }
+
+    .retention-list dd {
+      margin: 0;
+      color: #4f4c5b;
+    }
+
+    .contact-box {
+      padding: 28px;
+      border-radius: var(--radius-medium);
+      background: var(--text);
+      color: #fff;
+    }
+
+    .contact-box h2,
+    .contact-box p {
+      color: #fff;
+    }
+
+    .contact-box a {
+      color: #d7d1ff;
+    }
+
+    .back-to-top {
+      display: inline-block;
+      margin-top: 24px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    footer {
+      padding: 28px 0 52px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    footer p {
+      margin-bottom: 6px;
+    }
+
+    @media (max-width: 700px) {
+      main {
+        padding-top: 30px;
+      }
+
+      .hero,
+      .content {
+        padding-right: 24px;
+        padding-left: 24px;
+      }
+
+      .hero {
+        padding-top: 40px;
+      }
+
+      .toc-list,
+      .provider-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .toc,
+      .back-to-top,
+      footer {
+        display: none;
+      }
+
+      .page-shell {
+        width: 100%;
+      }
+
+      article {
+        border: 0;
+        box-shadow: none;
+      }
+
+      .hero,
+      .content {
+        padding-right: 0;
+        padding-left: 0;
+      }
+
+      a {
+        color: inherit;
+      }
+    }
+  </style>
 </head>
-<body>
-  <main>
-    <h1>Privacy Policy</h1>
 
-    <p><strong>Effective date:</strong> To be added</p>
+<body id="top">
+  <main class="page-shell">
+    <article>
+      <header class="hero">
+        <p class="eyebrow">Legal</p>
+        <h1>Privacy Policy</h1>
+        <p class="hero-copy">
+          This Privacy Policy explains how OuiOui collects, uses, shares, and retains information
+          when you use the OuiOui mobile application and related services.
+        </p>
+        <p class="updated">Last updated August 12, 2026</p>
+      </header>
 
-    <p>
-      This page will contain the Privacy Policy for the OuiOui mobile
-      application.
-    </p>
+      <div class="content">
+        <nav class="toc" aria-labelledby="contents-heading">
+          <h2 id="contents-heading">Contents</h2>
+          <ol class="toc-list">
+            <li><a href="#information-we-collect">Information we collect</a></li>
+            <li><a href="#location">Location and nearby features</a></li>
+            <li><a href="#how-we-use-information">How we use information</a></li>
+            <li><a href="#sharing">How information is shared</a></li>
+            <li><a href="#providers">Service providers</a></li>
+            <li><a href="#retention">Data retention</a></li>
+            <li><a href="#choices">Your privacy choices and rights</a></li>
+            <li><a href="#deletion">Account deletion</a></li>
+            <li><a href="#security">Security</a></li>
+            <li><a href="#minors">Age requirement and minors</a></li>
+            <li><a href="#third-party-links">Third-party links</a></li>
+            <li><a href="#changes">Changes to this policy</a></li>
+            <li><a href="#contact">Contact us</a></li>
+          </ol>
+        </nav>
 
-    <p>
-      <a href="../">Return to OuiOui Legal</a>
-    </p>
+        <section aria-labelledby="overview-heading">
+          <h2 id="overview-heading">Overview</h2>
+          <p class="lead">
+            OuiOui is a social application operated from Washington, United States. This Policy
+            describes the categories of personal information we collect, the purposes for which we
+            use it, the circumstances in which we disclose it, how long we retain it, and the choices
+            available to you. We do not sell your personal information or use it for third-party
+            advertising in the current TestFlight version.
+          </p>
+        </section>
+
+        <section id="information-we-collect" aria-labelledby="collection-heading">
+          <h2 id="collection-heading">Information we collect</h2>
+
+          <h3>Account and profile information</h3>
+          <p>We may collect:</p>
+          <ul>
+            <li>Your phone number for verification and account access.</li>
+            <li>Your display name, username, and date of birth.</li>
+            <li>Profile photos and other optional profile information you choose to provide.</li>
+            <li>Account settings, privacy settings, and notification preferences.</li>
+          </ul>
+
+          <h3>Content and social activity</h3>
+          <p>
+            We collect content and activity that you create or submit through OuiOui, including:
+          </p>
+          <ul>
+            <li>Photos and videos used in Moments or profiles, including audio contained in videos.</li>
+            <li>Moment audience selections, user tags, place tags, and related visibility choices.</li>
+            <li>Messages, conversation participation, reactions, likes, and other interactions.</li>
+            <li>Friend requests, friendships, lists, blocks, restrictions, votes, and reports.</li>
+            <li>Associated metadata, such as timestamps, participants, and content status.</li>
+          </ul>
+
+          <h3>Device and diagnostic information</h3>
+          <p>
+            We may automatically receive technical information needed to operate and protect the
+            Service, such as your IP address, device type, operating system, app version, a random
+            installation identifier, push notification token, request timestamps, crash information,
+            and performance diagnostics.
+          </p>
+
+          <h3>Camera, photo library, location, and notifications</h3>
+          <p>
+            With your permission, OuiOui may access your camera, photo library, location, and
+            notification capabilities. You can manage these permissions through your device settings.
+            Some features will not work without the permission they require.
+          </p>
+        </section>
+
+        <section id="location" aria-labelledby="location-heading">
+          <h2 id="location-heading">Location and nearby features</h2>
+          <p>
+            OuiOui uses location to determine your city or OuiOui scene, support city-based features,
+            find eligible nearby friends who are choosing to appear nearby, and find nearby places
+            that you may choose to tag.
+          </p>
+
+          <div class="callout">
+            <h3>How precise location works</h3>
+            <ul>
+              <li>
+                <strong>Appear Nearby is opt-in.</strong> When you turn on Appear Nearby, OuiOui
+                temporarily associates your precise location with your account so eligible nearby
+                friends can find you for tagging or conversation features.
+              </li>
+              <li>
+                <strong>Searching does not broadcast you.</strong> When you look for friends who are
+                currently appearing nearby, OuiOui uses your current location for the proximity
+                request, but this does not make you visible to other users.
+              </li>
+              <li>
+                <strong>Nearby place search is separate.</strong> OuiOui may use your current location
+                to return nearby places that you can choose to tag in a Moment.
+              </li>
+              <li>
+                <strong>Precise location is temporary.</strong> Precise location used for these nearby
+                features is processed in a short-lived Redis cache for no more than 90 seconds and is
+                then automatically purged. An Appear Nearby entry may be removed sooner when you stop
+                appearing.
+              </li>
+            </ul>
+          </div>
+
+          <p>
+            OuiOui does not show your precise coordinates to other users and does not maintain a
+            durable history of your precise coordinates. We may retain a derived city or scene and
+            related freshness information for city-based features. If you tag a person or place, or
+            create a conversation using a nearby feature, the resulting tag, place selection, or
+            conversation record may be retained according to its own lifecycle.
+          </p>
+        </section>
+
+        <section id="how-we-use-information" aria-labelledby="use-heading">
+          <h2 id="use-heading">How we use information</h2>
+          <p>We use information to:</p>
+          <ul>
+            <li>Create, authenticate, secure, and manage your account.</li>
+            <li>Provide profiles, friendships, lists, Moments, conversations, notifications, and City Pulse.</li>
+            <li>Apply the audience, privacy, block, restriction, and visibility choices used by the Service.</li>
+            <li>Provide city, nearby-user, nearby-place, and place-tagging features.</li>
+            <li>Store, process, deliver, and remove photos and videos.</li>
+            <li>Prevent spam, abuse, fraud, unauthorized access, and other harmful activity.</li>
+            <li>Investigate reports and enforce safety rules.</li>
+            <li>Diagnose errors, monitor reliability, and improve the Service.</li>
+            <li>Respond to support requests and comply with applicable legal obligations.</li>
+          </ul>
+        </section>
+
+        <section id="sharing" aria-labelledby="sharing-heading">
+          <h2 id="sharing-heading">How information is shared</h2>
+
+          <h3>With other users</h3>
+          <p>
+            OuiOui shares profile information, Moments, tags, messages, and other social activity with
+            other users according to the feature you use and the audience, relationship, privacy, and
+            safety settings that apply. Your phone number, date of birth, and precise coordinates are
+            not displayed to other users.
+          </p>
+
+          <h3>With service providers</h3>
+          <p>
+            We use service providers to operate OuiOui. They may process information on our behalf as
+            needed to provide hosting, phone verification, media services, push notifications,
+            diagnostics, security, and related technical functions. The principal providers used for
+            the TestFlight version are listed below.
+          </p>
+
+          <h3>For legal, safety, or business reasons</h3>
+          <p>We may disclose information when reasonably necessary to:</p>
+          <ul>
+            <li>Comply with law, legal process, or a valid government request.</li>
+            <li>Protect the rights, property, or safety of OuiOui, our users, or others.</li>
+            <li>Investigate suspected fraud, abuse, security incidents, or violations of our rules.</li>
+            <li>Complete a merger, financing, acquisition, reorganization, or sale of assets, subject to appropriate protections.</li>
+            <li>Carry out another purpose that you specifically authorize.</li>
+          </ul>
+        </section>
+
+        <section id="providers" aria-labelledby="providers-heading">
+          <h2 id="providers-heading">Service providers</h2>
+          <p>
+            The following providers may process information as part of operating the TestFlight version
+            of OuiOui:
+          </p>
+
+          <div class="provider-grid">
+            <div class="provider">
+              <strong>Twilio</strong>
+              <p>Phone-number verification and delivery of authentication codes.</p>
+              <a href="https://www.twilio.com/en-us/legal/privacy" target="_blank" rel="external nofollow noopener noreferrer">View Twilio's privacy notice</a>
+            </div>
+
+            <div class="provider">
+              <strong>Render</strong>
+              <p>Application hosting, databases, background services, and temporary caching.</p>
+              <a href="https://render.com/privacy" target="_blank" rel="external nofollow noopener noreferrer">View Render's privacy policy</a>
+            </div>
+
+            <div class="provider">
+              <strong>Amazon Web Services</strong>
+              <p>Storage, processing, and delivery of photos, videos, and related media.</p>
+              <a href="https://aws.amazon.com/privacy/" target="_blank" rel="external nofollow noopener noreferrer">View the AWS privacy notice</a>
+            </div>
+
+            <div class="provider">
+              <strong>Expo and Apple</strong>
+              <p>Push notification delivery and related device-token processing.</p>
+              <a href="https://expo.dev/privacy" target="_blank" rel="external nofollow noopener noreferrer">Expo privacy policy</a>
+              <span aria-hidden="true"> · </span>
+              <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="external nofollow noopener noreferrer">Apple privacy policy</a>
+            </div>
+
+            <div class="provider">
+              <strong>Sentry</strong>
+              <p>Crash reporting, error monitoring, and performance diagnostics.</p>
+              <a href="https://sentry.io/privacy/" target="_blank" rel="external nofollow noopener noreferrer">View Sentry's privacy policy</a>
+            </div>
+          </div>
+
+          <p>
+            OuiOui uses public place data derived from sources such as Overture Maps, but does not send
+            your personal information to Overture Maps to perform nearby matching.
+          </p>
+        </section>
+
+        <section id="retention" aria-labelledby="retention-heading">
+          <h2 id="retention-heading">Data retention</h2>
+          <p>
+            We retain different categories of information for different periods, based on the feature,
+            operational need, safety requirements, and applicable law. We may delete or anonymize
+            information sooner when it is no longer needed.
+          </p>
+
+          <dl class="retention-list">
+            <div>
+              <dt>Precise nearby location</dt>
+              <dd>Retained in a temporary cache for no more than 90 seconds.</dd>
+            </div>
+
+            <div>
+              <dt>City or scene context</dt>
+              <dd>May be retained longer than precise location to operate city-based features and validate current context.</dd>
+            </div>
+
+            <div>
+              <dt>Moments and media</dt>
+              <dd>
+                Moments are designed to remain actively visible for up to three hours. Underlying
+                records, references, and expired media may be retained longer where needed for media
+                processing, notifications, conversations, safety, deletion, or technical operations.
+                Expired Moment media may be retained for up to 14 days.
+              </dd>
+            </div>
+
+            <div>
+              <dt>Messages and conversations</dt>
+              <dd>
+                Messages and conversation records follow their own lifecycle and may remain after a
+                related Moment is no longer visible. They may be removed sooner or made inaccessible
+                because of deletion, blocking, reporting, or other safety actions.
+              </dd>
+            </div>
+
+            <div>
+              <dt>Account and profile information</dt>
+              <dd>
+                Generally retained while your account is active. When you delete your account, access
+                is disabled and deletion of associated data begins, subject to limited safety, fraud,
+                legal, operational, and backup retention.
+              </dd>
+            </div>
+
+            <div>
+              <dt>Reports, security, and diagnostic records</dt>
+              <dd>
+                May be retained for longer periods when reasonably necessary to investigate abuse,
+                prevent fraud, protect users, resolve disputes, maintain system security, or comply
+                with law.
+              </dd>
+            </div>
+          </dl>
+
+          <p>
+            Residual copies may remain in encrypted backups until those backups rotate out of use.
+            Backups are not restored for ordinary product use after a deletion request.
+          </p>
+        </section>
+
+        <section id="choices" aria-labelledby="choices-heading">
+          <h2 id="choices-heading">Your privacy choices and rights</h2>
+          <ul>
+            <li>You can manage location, camera, photo-library, and notification permissions in your device settings.</li>
+            <li>You can stop Appear Nearby from within OuiOui; the temporary location entry also expires automatically.</li>
+            <li>You can choose Moment audiences and use available privacy, list, restriction, block, and report controls.</li>
+            <li>You can update supported profile information from within the app.</li>
+            <li>You can delete your account from the account-management area in the app.</li>
+            <li>You may contact us to request access to, correction of, or deletion of personal information, subject to applicable law and appropriate identity verification.</li>
+          </ul>
+          <p>Privacy rights vary by jurisdiction. We will respond to verified requests as required by applicable law.</p>
+        </section>
+
+        <section id="deletion" aria-labelledby="deletion-heading">
+          <h2 id="deletion-heading">Account deletion</h2>
+          <p>
+            You can delete your OuiOui account from the account-management area in the app. Deleting
+            the app from your device does not by itself delete your account.
+          </p>
+          <p>
+            Account deletion disables access to the account and starts deletion of associated product
+            data. We may retain limited information where reasonably necessary for safety, fraud
+            prevention, legal compliance, dispute resolution, or backup rotation. Reports and other
+            safety records may be retained even after related content or accounts are deleted.
+          </p>
+          <p>
+            You may also contact <a href="mailto:support@getouioui.com">support@getouioui.com</a> for
+            help with a privacy or deletion request.
+          </p>
+        </section>
+
+        <section id="security" aria-labelledby="security-heading">
+          <h2 id="security-heading">Security</h2>
+          <p>
+            We use technical and organizational safeguards designed to protect personal information,
+            including access controls, encrypted network connections, restricted provider credentials,
+            and private storage for protected media. No method of transmission or storage is completely
+            secure, and we cannot guarantee absolute security.
+          </p>
+        </section>
+
+        <section id="minors" aria-labelledby="minors-heading">
+          <h2 id="minors-heading">Age requirement and minors</h2>
+          <p>
+            You must be at least 18 years old to create or use a OuiOui account. OuiOui is not
+            directed to anyone under 18, and we do not knowingly permit anyone under 18 to use the
+            Service. If we learn that a person under 18 has created an account or provided personal
+            information, we will take reasonable steps to disable the account and delete the
+            associated personal information, subject to limited records that may be retained for
+            safety, legal, or compliance purposes.
+          </p>
+        </section>
+
+        <section aria-labelledby="transfers-heading">
+          <h2 id="transfers-heading">Where information is processed</h2>
+          <p>
+            OuiOui is operated from the United States. We and our service providers may process and
+            store information in the United States and other locations where they operate. Privacy and
+            data-protection laws may differ between jurisdictions.
+          </p>
+        </section>
+
+        <section id="third-party-links" aria-labelledby="third-party-links-heading">
+          <h2 id="third-party-links-heading">Third-party links</h2>
+          <p>
+            OuiOui may contain links to websites or services that we do not operate. Their privacy
+            practices are governed by their own policies, and we are not responsible for those
+            third-party services.
+          </p>
+        </section>
+
+        <section id="changes" aria-labelledby="changes-heading">
+          <h2 id="changes-heading">Changes to this policy</h2>
+          <p>
+            We may update this Privacy Policy as OuiOui changes. We will post the updated policy on
+            this page and change the “Last updated” date above. When appropriate, we may also provide
+            notice in the app before a material change takes effect.
+          </p>
+        </section>
+
+        <section id="contact" aria-labelledby="contact-heading">
+          <div class="contact-box">
+            <h2 id="contact-heading">Contact us</h2>
+            <p>
+              Questions or requests about this Privacy Policy can be sent to
+              <a href="mailto:support@getouioui.com">support@getouioui.com</a>.
+            </p>
+          </div>
+          <a class="back-to-top" href="#top">Back to top ↑</a>
+        </section>
+      </div>
+    </article>
   </main>
+
+  <footer class="page-shell">
+    <p>© 2026 OuiOui. All rights reserved.</p>
+  </footer>
 </body>
 </html>
